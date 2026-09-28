@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-100 text-slate-900 antialiased;
+}
+
+@layer components {
+  .gov-card {
+    @apply rounded-md border border-slate-200 bg-white shadow-sm;
+  }
+
+  .gov-label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+
+  .gov-input {
+    @apply w-full rounded border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900
+           placeholder:text-slate-400 focus:border-gov focus:outline-none focus:ring-1 focus:ring-gov
+           disabled:bg-slate-100 disabled:text-slate-500;
+  }
+
+  .gov-btn {
+    @apply inline-flex items-center justify-center rounded border px-3.5 py-2 text-sm font-medium
+           transition-colors focus:outline-none focus:ring-2 focus:ring-gov focus:ring-offset-1
+           disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .gov-btn-primary {
+    @apply gov-btn border-gov bg-gov text-white hover:bg-gov-dark;
+  }
+
+  .gov-btn-secondary {
+    @apply gov-btn border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+  }
+
+  .gov-th {
+    @apply whitespace-nowrap px-4 py-2.5 text-left text-xs font-semibold uppercase tracking-wide text-slate-600;
+  }
+
+  .gov-td {
+    @apply px-4 py-2.5 text-sm text-slate-800;
+  }
+
+  .gov-section-title {
+    @apply border-b border-slate-200 px-4 py-3 text-sm font-semibold uppercase tracking-wide text-slate-700;
+  }
+}
