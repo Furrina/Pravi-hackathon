@@ -236,15 +236,3 @@ Sign in as `officer@gov.example.in` to see the restrictions: no *Register asset*
 no *Edit*, and `Retired` is absent from the lifecycle options.
 
 ---
-
-## 11. Notes and limitations
-
-This is an MVP, deliberately scoped:
-
-- No citizen-facing functionality.
-- No photo or document uploads.
-- No Departments / Asset Classes / Users management screens — reference data is seeded in
-  SQL.
-- Asset classes and their attribute schemas are edited directly in the `asset_classes`
-  table; the UI reads `attribute_schema` and renders `text`, `number`, `boolean` and
-  `select` fields from it.
